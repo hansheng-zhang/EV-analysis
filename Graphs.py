@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from collections import Counter
 
 def grouped_bar_graph_var(input_data, labels, x_axis, y_axis, var_div, title):
         '''
@@ -63,3 +64,31 @@ def grouped_bar_graph_var(input_data, labels, x_axis, y_axis, var_div, title):
         plt.xticks(ticks=np.arange(0, len(compare_charging_data), 4), labels=cities, rotation=0)
         plt.tight_layout()
         return plt
+
+
+def pie_graph(input_data, title):
+     '''
+        Creates a pie chart distrubution based on input_data
+
+        Args:
+            input_data (list): data 
+
+            title (str): title of the chart
+        
+        Returns:
+            None: shows pie chart
+     '''
+
+     assert isinstance(input_data, list), 'input_data must be a list'
+     assert isinstance(title, str), 'title must be a string'
+
+     d = Counter(input_data)
+     labels = d.keys()
+     size = d.values()
+     colors = ['red', 'blue', 'green', 'cyan', 'orange', 'purple', 'coral', 'pink']
+     colors = colors[:len(labels)]
+
+     plt.figure(figsize=(8, 8))
+     plt.pie(size, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+     plt.title(f'Distrubtion of {title}')
+     plt.tight_layout()
