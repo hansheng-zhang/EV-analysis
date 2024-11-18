@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from collections import Counter
 
+"""
+Module Name: Graphs
+===
+Description: Holds code for reusable graphs formats
+"""
+
 def grouped_bar_graph_var(input_data, labels, x_axis, y_axis, var_div, title):
         '''
             Creates bar graphs that show the min, mean, max, and variance of all labels in the dataset
@@ -64,7 +70,6 @@ def grouped_bar_graph_var(input_data, labels, x_axis, y_axis, var_div, title):
         plt.xticks(ticks=np.arange(0, len(compare_charging_data), 4), labels=cities, rotation=0)
         plt.tight_layout()
         return plt
-
 
 def pie_graph(input_data, title):
      '''
