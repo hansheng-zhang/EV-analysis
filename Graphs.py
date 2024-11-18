@@ -19,6 +19,7 @@ def grouped_bar_graph_var(input_data, labels, x_axis, y_axis, var_div, title):
             
             Returns:
                 None: shows bar graph
+                
         '''
         assert isinstance(input_data, pd.Series), 'input_data must be a pandas series'
         assert isinstance(labels, list), 'lables must be a list'
