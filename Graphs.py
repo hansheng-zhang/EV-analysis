@@ -7,13 +7,15 @@ def grouped_bar_graph_var(input_data, labels, x_axis, y_axis, var_div, title):
             Creates bar graphs that show the min, mean, max, and variance of all labels in the dataset
 
             Args:
-                input_data (Pandas Series): each label and its assocated data as a list
+                input_data (Pandas Series): each label and its assocatied data as a list
 
                 labels (list): the list of keys
 
                 x_axis (str): title of x-axis
 
                 y_axis (str): title of y-axis
+
+                var_div (int): a non zero int that will  normalize variance
             
             Returns:
                 None: shows bar graph
