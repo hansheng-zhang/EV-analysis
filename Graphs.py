@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from collections import Counter
+import seaborn as sns
 
 """
 Module Name: Graphs
@@ -97,3 +98,39 @@ def pie_graph(input_data, title):
      plt.pie(size, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
      plt.title(f'Distrubtion of {title}')
      plt.tight_layout()
+
+def create_barplot(data, xlabel, ylabel, title, annotate=True, rotation=0, stacked=False, legend=False):
+    """
+    Creates a bar plot with optional annotations.
+
+    Parameters:
+        data (pd.Series): Data to be plotted, indexed by bar categories.
+        title (str): Title of the plot.
+        xlabel (str): Label for the x-axis.
+        ylabel (str): Label for the y-axis.
+        annotate (bool): Whether to annotate bars with their values.
+        annotate_format (str): Format string for annotations.
+        rotation (int): Rotation angle for x-axis labels.
+
+    Returns:
+        None: Displays the plot.
+    """
+    ax = data.plot(kind='bar', title=title, stacked=stacked)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.xticks(rotation=rotation)
+    if legend:
+        plt.legend(loc='upper right')
+    
+    if annotate:
+        for i, v in enumerate(data):
+            plt.text(i, v + 0.01, str(round(v, 2)), ha='center')
+    plt.tight_layout()
+    plt.show()
+
+def sns_scatterplot(x, y, data, title, xlabel, ylabel):
+    sns.scatterplot(x=x, y=y, data=data)
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.show()
