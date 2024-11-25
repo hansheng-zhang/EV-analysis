@@ -10,11 +10,11 @@ This dataset served as the foundation for an in-depth exploratory analysis aimed
 Through this comprehensive approach, we aimed to gain actionable insights into EV charging trends and the factors that drive cost efficiency and energy consumption. All visuals can be found in the Juypter notebook in this repo; aswell as our functions used to generate visuals can be found in Graphs.py
 
 # Repo Format FINSIH LATER
-The format of this GitHub repo is as follows. It holds all the python modules we developed to not reuse code, the final juypter notebook(visualization.ipynb) that holds all visualizations, and a pdf copy of the slides we presented
+The format of this GitHub repo is as follows. It holds all the python modules we developed to not reuse code, the final juypter notebook(`visualization.ipynb`) that holds all visualizations, and a pdf copy of the slides we presented
 CHANGE TO A LIST
 
 # How to run code FINISH LATER
-To run the juypter notebook visualization.ipynb, make sure all third party are installed and include the aditional python file `Graph.py`
+To run the juypter notebook `visualization.ipynb`, make sure all third party are installed and include the aditional python file `Graph.py`
 
 # 3rd Party Modules UPDATE LATER
 * NumPy
