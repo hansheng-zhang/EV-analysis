@@ -15,7 +15,7 @@ The format of this GitHub repo is as follows. It holds all the python module we 
 # How to run code
 To run the juypter notebook `visualization.ipynb`, make sure all third party are installed and include the aditional python file `Graph.py`
 
-# 3rd Party Modules UPDATE LATER
+# 3rd Party Modules
 * NumPy
 * Pandas
 * Seaborn
