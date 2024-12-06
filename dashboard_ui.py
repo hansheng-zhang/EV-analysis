@@ -6,7 +6,9 @@ import pandas as pd
 
 
 class Window(Ui_MainWindow, QMainWindow):
-    """ Main Window """
+    """
+    Main window class. Inherits from the Ui_MainWindow in ece143_vis, and implements functionality
+    """
     
     def __init__(self, parent=None):
         # Graphing settings
@@ -36,14 +38,23 @@ class Window(Ui_MainWindow, QMainWindow):
         self.plot_all_models.clicked.connect(self.plotmodels_flag)
 
     def plotmodels_flag(self):
+        """
+        Function that changes the plotting all models flag to true
+        """
         self.plotting_all_models = True
         self.update_plot()
 
     def modelchange_flag(self):
+        """
+        Function that changes the plotting_allmodels flag to false (kinda hacky but it works :D)
+        """
         self.plotting_all_models = False
         self.update_plot()
 
     def update_plot(self):
+        """
+        Function to update plot if radio boxes are checked
+        """
         if self.distance_driven.isChecked():
             self.plotdistance()
         elif self.energy_consumed.isChecked():
@@ -54,6 +65,9 @@ class Window(Ui_MainWindow, QMainWindow):
             self.plotcost()
 
     def plotdistance(self):
+        """
+        Function that plots distance, utilizing similar methods we used to develop visualizations for the dashboard (except with pyqt)
+        """
         self.graphWidget.clear()
 
         if self.plotting_all_models:
@@ -76,6 +90,9 @@ class Window(Ui_MainWindow, QMainWindow):
         self.graphWidget.getAxis('bottom').setTicks([[(i, model) for i, model in enumerate(models)]])
 
     def plotenergy(self):
+        """
+        Function that plots energy consumed, utilizing similar methods we used to develop visualizations for the dashboard (except with pyqt)
+        """
         self.graphWidget.clear()
 
         if self.plotting_all_models:
@@ -96,6 +113,9 @@ class Window(Ui_MainWindow, QMainWindow):
         self.graphWidget.getAxis('bottom').setTicks([[(i, model) for i, model in enumerate(models)]])
 
     def plotbat(self):
+        """
+        Function that plots battery capacity, utilizing similar methods we used to develop visualizations for the dashboard (except with pyqt)
+        """
         self.graphWidget.clear()
 
         if self.plotting_all_models:
@@ -116,6 +136,9 @@ class Window(Ui_MainWindow, QMainWindow):
         self.graphWidget.getAxis('bottom').setTicks([[(i, model) for i, model in enumerate(models)]])
 
     def plotcost(self):
+        """
+        Function that plots charging cost, utilizing similar methods we used to develop visualizations for the dashboard (except with pyqt)
+        """
         self.graphWidget.clear()
 
         if self.plotting_all_models:

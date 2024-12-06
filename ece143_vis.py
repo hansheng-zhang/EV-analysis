@@ -10,6 +10,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
+    """
+    UI mainwindow object created using pyqt designer, and translating the uic file to python code.
+    """
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(668, 462)
