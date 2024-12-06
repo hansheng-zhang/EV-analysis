@@ -25,6 +25,7 @@ To use the visualizer, simply run 'dashboard_ui.py' and have the required import
 The visualizer uses the csv file to parse through it's data, so make sure its in the same folder!
 
 [![Visualization Demo](https://img.youtube.com/vi/9fW47XwXoVg/0.jpg)](https://www.youtube.com/watch?v=9fW47XwXoVg)
+(This is a demo video, click it to see the visualizer in action!)
 
 # Repo Format
 The format of this GitHub repo is as follows. It holds all the python module we developed to not reuse code `Graphs.py`, the final juypter notebook(`visualization.ipynb`) that holds all visualizations, and a pdf copy of the slides we presented
